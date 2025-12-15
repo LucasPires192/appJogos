@@ -9,7 +9,7 @@ export async function buscarJogos() {
     }
 
     const data = await response.json();
-    return data;
+    return data.data.items;
   } catch (error) {
     console.error('Erro em buscarJogos:', error);
     throw error;
