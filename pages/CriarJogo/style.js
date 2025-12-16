@@ -32,7 +32,7 @@ export const styles = StyleSheet.create(
             borderWidth: 1,
             marginVertical: 5
         },
-        buttonsContainer:{
+        buttonsContainer: {
             gap: 10
         },
         buttons: {
@@ -46,4 +46,4 @@ export const styles = StyleSheet.create(
             color: '#fff'
         }
     }
-)
+);
