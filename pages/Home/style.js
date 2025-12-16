@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { COLORS } from '../../styles/variables';
 
 export const styles = StyleSheet.create(
     {
@@ -7,7 +8,7 @@ export const styles = StyleSheet.create(
             justifyContent: 'center',
             alignItems: 'center',
             paddingTop: 20,
-            backgroundColor: '#4d4c4cff'
+            backgroundColor: COLORS.background
         },
         image: {
             width: 150,
@@ -15,7 +16,7 @@ export const styles = StyleSheet.create(
             marginTop: 20
         },
         flatlist: {
-            backgroundColor: '#7e7b7bff',
+            backgroundColor: COLORS.secondary,
             width: '95%',
             paddingHorizontal: 10,
             borderRadius: 10,
@@ -27,7 +28,7 @@ export const styles = StyleSheet.create(
             paddingHorizontal: 20,
             borderBottomWidth: 1,
             borderColor: '#fff',
-            color: '#fff'
+            color: COLORS.text
         },
         actionsColumn: {
             justifyContent: 'space-around',
@@ -46,7 +47,7 @@ export const styles = StyleSheet.create(
             elevation: 5,
         },
         plusIcon: {
-            color: '#fff',
+            color: COLORS.text,
             fontSize: 32,
             lineHeight: 36,
             marginBottom: 2,

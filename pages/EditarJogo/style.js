@@ -1,15 +1,16 @@
 import { StyleSheet } from 'react-native';
+import { COLORS } from '../../styles/variables';
 
 export const styles = StyleSheet.create(
     {
         container: {
             flex: 1,
-            backgroundColor: '#4d4c4cff',
+            backgroundColor: COLORS.background,
             alignItems: 'center',
             justifyContent: 'center'
         },
         cardForm: {
-            backgroundColor: '#c9c9c9ff',
+            backgroundColor: COLORS.secondary,
             alignItems: 'center',
             width: '90%',
             paddingHorizontal: 10,
@@ -23,7 +24,7 @@ export const styles = StyleSheet.create(
             marginBottom: 30,
             borderBottomWidth: 1,
             borderColor: '#fff',
-            color: '#fff'
+            color: COLORS.text
         },
         input: {
             width: '80%',
@@ -43,7 +44,7 @@ export const styles = StyleSheet.create(
             alignItems: 'center'
         },
         buttonsText: {
-            color: '#fff'
+            color: COLORS.text
         }
     }
 )

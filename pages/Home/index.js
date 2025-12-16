@@ -59,9 +59,11 @@ export default function Home({ navigation }) {
                                 <Card>
                                     <CardTitle>{item.nome} </CardTitle>
                                     <CardContent>
-                                        <Text>Genero: {item.genero}</Text>
-                                        <Text>Ano: {item.ano}</Text>
-                                        <Text>Plataforma: {item.plataforma}</Text>
+                                        <View>
+                                            <Text>Genero: {item.genero}</Text>
+                                            <Text>Ano: {item.ano}</Text>
+                                            <Text>Plataforma: {item.plataforma}</Text>
+                                        </View>
                                         <View style={styles.actionsColumn}>
                                             <IconButton
                                                 icon="pencil"

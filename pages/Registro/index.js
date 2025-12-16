@@ -33,50 +33,68 @@ export default function Registro({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <Text>Cadastro</Text>
-            <TextInput
-                style={styles.input}
-                placeholder="Nome"
-                value={name}
-                onChangeText={setName}
-            />
-            <TextInput
-                style={styles.input}
-                placeholder="Bio"
-                value={bio}
-                onChangeText={setBio}
-            />
-            <TextInput
-                style={styles.input}
-                placeholder="Email"
-                value={email}
-                onChangeText={setEmail}
-            />
-            <TextInput
-                style={styles.input}
-                placeholder="Senha"
-                value={password}
-                onChangeText={setPassword}
-                secureTextEntry
-            />
-            <View style={styles.buttonsContainer}>
-                <TouchableOpacity
-                    style={styles.buttons}
-                    onPress={handleRegister}
-                >
-                    <Text style={styles.buttonsText}>
-                        Cadastrar
-                    </Text>
-                </TouchableOpacity>
+            <Text style={styles.title}>Cadastro</Text>
+            <View style={styles.formCard}>
+                <View style={styles.inputGroup}>
+                    <Text>Nome</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Nome"
+                        value={name}
+                        onChangeText={setName}
+                    />
+                </View>
 
-                <TouchableOpacity
-                    style={styles.buttons}
-                    onPress={() => { navigation.replace('Login') }}
-                >
-                    <Text style={styles.buttonsText}>
-                        Voltar
-                    </Text>
-                </TouchableOpacity>
+                <View style={styles.inputGroup}>
+                    <Text>Bio</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Bio"
+                        value={bio}
+                        onChangeText={setBio}
+                    />
+                </View>
+
+                <View style={styles.inputGroup}>
+                    <Text>Email</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Email"
+                        value={email}
+                        onChangeText={setEmail}
+                    />
+                </View>
+
+                <View style={styles.inputGroup}>
+                    <Text>Senha</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Senha"
+                        value={password}
+                        onChangeText={setPassword}
+                        secureTextEntry
+                    />
+                </View>
+
+                <View style={styles.buttonsContainer}>
+                    <TouchableOpacity
+                        style={styles.buttons}
+                        onPress={handleRegister}
+                    >
+                        <Text style={styles.buttonsText}>
+                            Cadastrar
+                        </Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.buttons}
+                        onPress={() => { navigation.replace('Login') }}
+                    >
+                        <Text style={styles.buttonsText}>
+                            Voltar
+                        </Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         </View>
     )

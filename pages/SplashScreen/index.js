@@ -19,7 +19,8 @@ export default function SplashScreen({ navigation }){
             <ActivityIndicator 
                 size="large" 
                 color="#0000ff" 
-                style={styles.loader} />
+                style={styles.loader} 
+            />
         </View>
     );
 };
