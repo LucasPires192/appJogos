@@ -8,8 +8,7 @@ export const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     splashImage: {
-        width: 150,
-        height: 150,
+        flex: 1,
         marginBottom: 20,
     },
     loader: {

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, Alert } from 'react-native';
+import { View, Text, TextInput, Button, Alert, TouchableOpacity } from 'react-native';
 import { signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
 import { auth } from '../../firebase';
+
 import { styles } from './style.js';
 
 export default function Login({ navigation }){
@@ -53,18 +54,34 @@ export default function Login({ navigation }){
 
             {error ? <Text style={styles.error}>{error}</Text> : null}
 
-            <Button
-                title='Entrar'
-                onPress={handleLogin}
-            />
-            <Button 
-                title='Cadastrar'
-                onPress={() => navigation.navigate('Registro')}
-            />
-            <Button 
-                title='Esqueci a senha'
-                onPress={handlePasswordReset}
-            />
+            <View style={styles.buttonsContainer}>
+                <TouchableOpacity
+                    style={styles.buttons}
+                    onPress={handleLogin}
+                >
+                    <Text style={styles.buttonsText}>
+                        Entrar
+                    </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={styles.buttons}
+                    onPress={() => navigation.navigate('Registro')}
+                >
+                    <Text style={styles.buttonsText}>
+                        Cadastrar
+                    </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity 
+                    style={styles.buttons}
+                    onPress={handlePasswordReset}
+                >
+                    <Text style={styles.buttonsText}>
+                        Esqueci a senha
+                    </Text>
+                </TouchableOpacity>
+            </View>
         </View>
     )
 }
